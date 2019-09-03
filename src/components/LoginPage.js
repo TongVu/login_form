@@ -58,7 +58,7 @@ class LoginPage extends React.Component {
             user = users.filter(user => user.name === inputName);
 
             //------------------------------------------------------------------------//
-            //---------- Kết quả từ hàm lgin kiểm tra đúng thì chuyển trang ----------//
+            //---------- Kết quả từ hàm login kiểm tra đúng thì chuyển trang ----------//
             //------------------------------------------------------------------------//
             history && user[0].logIn
               ? this.redirectToUser()
