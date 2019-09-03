@@ -33,6 +33,7 @@ const userReducers = (state = [], action) => {
       state.filter(instant => {
         if (instant.name === action.userName && instant.pwd === action.userPwd)
           return (instant.logIn = true);
+        return state;
       });
       return state;
     }
