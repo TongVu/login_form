@@ -4,8 +4,6 @@
   
 ---- [ In UserPage ] : Can't render fetched posts (from status) to UserPage.
 
-##############################################################################################################################
-
 # Update
 
 ---- fixed all problems above
