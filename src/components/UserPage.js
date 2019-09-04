@@ -9,7 +9,7 @@ class UserPage extends React.Component {
     const { posts, getPosts } = this.props;
 
     return (
-      <div className="user-page-container">
+      <div className="user-page-container" style={userPageStyle}>
         <Button
           type="primary"
           onClick={e => {
@@ -26,6 +26,21 @@ class UserPage extends React.Component {
     );
   }
 }
+
+// ------------------------------------------------------------------------ //
+// ---------------------------  CONTAINER STYLE  ------------------------- //
+// ---------------------------------------------------------------------- //
+
+const userPageStyle = {
+  position: "relative",
+  margin: "0",
+  padding: "15px",
+  display: "flex",
+  flexFlow: "column nowrap",
+  alignItems: "center",
+  width: "100vw",
+  backgroundColor: "lightgrey"
+};
 
 const mapStateToProps = state => ({
   posts: state.getPosts.posts
