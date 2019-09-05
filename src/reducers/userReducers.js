@@ -5,6 +5,7 @@ const userReducers = (state = [], action) => {
     //---------------------------------------------------------------------//
     //----- Nếu password đăng kí nhập lại đúng thì cập nhật userList------//
     //-------------------------------------------------------------------//
+
     case "REGISTER": {
       var registerStatus = true;
       state.forEach(user => {
@@ -13,6 +14,7 @@ const userReducers = (state = [], action) => {
           return registerStatus;
         }
       });
+
       if (action.userPwd === action.rePwd && registerStatus === true) {
         return [
           ...state,
@@ -29,6 +31,7 @@ const userReducers = (state = [], action) => {
     //----------------------------------------------------------------------------//
     //-- Nếu name === input name và password === input password thì login true --//
     //--------------------------------------------------------------------------//
+
     case "LOGIN": {
       state.filter(instant => {
         if (instant.name === action.userName && instant.pwd === action.userPwd)
